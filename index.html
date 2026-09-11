@@ -7,6 +7,7 @@
 <meta name="description" content="Nowl detects anomalies in production telemetry in real time and pages one person with the evidence. Deploy as SaaS, in your own VPC, or fully self-hosted.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;700&family=Anuphan:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070A17'/><circle cx='11.5' cy='15' r='5' fill='none' stroke='%23F0A22E' stroke-width='2'/><circle cx='20.5' cy='15' r='5' fill='none' stroke='%23F0A22E' stroke-width='2'/><circle cx='11.5' cy='15' r='1.9' fill='%23F0A22E'/><circle cx='20.5' cy='15' r='1.9' fill='%23F0A22E'/></svg>">
 
@@ -282,9 +283,16 @@ pre.code .c{color:var(--fg-3)} pre.code .k{color:var(--blue)} pre.code .s{color:
 @media(max-width:560px){.team{grid-template-columns:1fr}}
 .person{background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:11px;transition:background .18s}
 .person:hover{background:var(--surface)}
+.avatar-link{display:block;width:48px;height:48px;border-radius:50%;position:relative;text-decoration:none;
+  align-self:flex-start;transition:box-shadow .18s,transform .18s}
+.avatar-link:hover{transform:translateY(-1px);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--amber)}
+.avatar-link:focus-visible{outline:0;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--blue)}
 .avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--line);
   background:var(--surface-2);display:flex;align-items:center;justify-content:center;
-  font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--fg-3)}
+  font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--fg-3);
+  font-variation-settings:normal;letter-spacing:.02em}
+.person h3 a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
+.person h3 a:hover{border-bottom-color:var(--amber)}
 .person .th{color:var(--fg-3);font-size:.85rem;margin-top:2px}
 .role{font-family:"JetBrains Mono",monospace;font-size:.67rem;color:var(--amber);letter-spacing:.05em}
 .person p{color:var(--fg-2);font-size:.87rem}
@@ -625,46 +633,51 @@ footer.ft{border-top:1px solid var(--line-2);padding:36px 0 46px;margin-top:var(
     </div>
     <div class="team">
       <article class="person">
-        <div class="avatar" aria-hidden="true">RS</div>
-        <div><h3>Rachata Saphumuang</h3></div>
-        <div class="role">CEO</div>
-        <p>Sets direction and owns partnerships with manufacturing and financial services customers.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <a class="avatar-link" href="https://github.com/martsai" aria-label="Rachata Saphumuang on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/44117387?v=4&amp;s=96" alt="Rachata Saphumuang" loading="lazy" width="48" height="48" data-initials="RS"></a>
+        <h3><a href="https://github.com/martsai">Rachata Saphumuang</a></h3>
+        <div class="role">CHIEF EXECUTIVE</div>
+        <p>Sets company direction and owns customer relationships through pilot and rollout.</p>
+        <div class="links"><a href="https://github.com/martsai">GitHub</a></div>
       </article>
+
       <article class="person">
-        <div class="avatar" aria-hidden="true">JW</div>
-        <div><h3>Jedsada wongkeaw</h3></div>
-        <div class="role">CTO</div>
-        <p>Owns the detection architecture, from streaming ingest through to how a score becomes a page.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <a class="avatar-link" href="https://github.com/armza8053-alt" aria-label="Jedsada Wongkeaw on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/227363719?v=4&amp;s=96" alt="Jedsada Wongkeaw" loading="lazy" width="48" height="48" data-initials="JW"></a>
+        <h3><a href="https://github.com/armza8053-alt">Jedsada Wongkeaw</a></h3>
+        <div class="role">CHIEF TECHNOLOGY OFFICER</div>
+        <p>Owns the detection architecture end to end, from streaming ingest through to how a score becomes a page.</p>
+        <div class="links"><a href="https://github.com/armza8053-alt">GitHub</a></div>
       </article>
+
       <article class="person">
-        <div class="avatar" aria-hidden="true">CI</div>
-        <div><h3>Chanokchon inthananuch</h3></div>
-        <div class="role">ML ENGINEER</div>
-        <p>Builds and evaluates the detector ensemble at the core of the platform.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <a class="avatar-link" href="https://github.com/chnkcn97" aria-label="Chanokchon Inthananuch on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/225046256?v=4&amp;s=96" alt="Chanokchon Inthananuch" loading="lazy" width="48" height="48" data-initials="CI"></a>
+        <h3><a href="https://github.com/chnkcn97">Chanokchon Inthananuch</a></h3>
+        <div class="role">MACHINE LEARNING</div>
+        <p>Builds and evaluates the detector ensemble, and owns how sensitivity maps to real on-call load.</p>
+        <div class="links"><a href="https://github.com/chnkcn97">GitHub</a></div>
       </article>
+
       <article class="person">
-        <div class="avatar" aria-hidden="true">SB</div>
-        <div><h3>Saran Bunwan</h3></div>
-        <div class="role">FULL STACK</div>
-        <p>Builds web interfaces, dashboards, and end-to-end integration workflows.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <a class="avatar-link" href="https://github.com/Chokunn" aria-label="Saran Bunwan on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/233382543?v=4&amp;s=96" alt="Saran Bunwan" loading="lazy" width="48" height="48" data-initials="SB"></a>
+        <h3><a href="https://github.com/Chokunn">Saran Bunwan</a></h3>
+        <div class="role">FULL-STACK ENGINEERING</div>
+        <p>Builds the console and the alert surfaces engineers actually read at three in the morning.</p>
+        <div class="links"><a href="https://github.com/Chokunn">GitHub</a></div>
       </article>
+
       <article class="person">
-        <div class="avatar" aria-hidden="true">YK</div>
-        <div><h3>Yotsakorn Klahan</h3></div>
-        <div class="role">DEV &amp; INFRAS</div>
-        <p>Runs deployment, cloud infrastructure, and reliable delivery pipelines.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <a class="avatar-link" href="https://github.com/Draco-afk" aria-label="Yotsakorn Klahan on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/196110439?v=4&amp;s=96" alt="Yotsakorn Klahan" loading="lazy" width="48" height="48" data-initials="YK"></a>
+        <h3><a href="https://github.com/Draco-afk">Yotsakorn Klahan</a></h3>
+        <div class="role">DEV &amp; INFRASTRUCTURE</div>
+        <p>Runs the deployment story across Cloud, VPC and self-hosted, including upgrades and the on-call rota for our own platform.</p>
+        <div class="links"><a href="https://github.com/Draco-afk">GitHub</a></div>
       </article>
+
       <article class="person">
-        <div class="avatar" aria-hidden="true">SK</div>
-        <div><h3>Santisuk klakanrob</h3></div>
+        <a class="avatar-link" href="https://github.com/Ostudio007" aria-label="Santisuk Klakanrob on GitHub"><img class="avatar" src="https://avatars.githubusercontent.com/u/197658943?v=4&amp;s=96" alt="Santisuk Klakanrob" loading="lazy" width="48" height="48" data-initials="SK"></a>
+        <h3><a href="https://github.com/Ostudio007">Santisuk Klakanrob</a></h3>
         <div class="role">DATA</div>
         <p>Designs the streaming pipelines and feature store that every detector reads from.</p>
-        <div class="links"><a href="#contact">Contact</a></div>
+        <div class="links"><a href="https://github.com/Ostudio007">GitHub</a></div>
       </article>
     </div>
   </div>
@@ -1062,7 +1075,18 @@ function calc(){
 Object.keys(C).forEach(function(k2){ C[k2].addEventListener('input', calc); });
 calc();
 
-/* ══════════ 6. incident feed ══════════ */
+/* ══════════ 6. avatar fallback ══════════ */
+Array.prototype.forEach.call(document.querySelectorAll('img.avatar'), function(img){
+  img.addEventListener('error', function(){
+    var d = document.createElement('div');
+    d.className = 'avatar';
+    d.textContent = img.getAttribute('data-initials') || '?';
+    d.setAttribute('aria-hidden','true');
+    if(img.parentNode) img.parentNode.replaceChild(d, img);
+  });
+});
+
+/* ══════════ 7. incident feed ══════════ */
 var EVENTS = [
 {sev:'warn', t:'Request latency above learned baseline', m:'api-gateway · p99 312ms → 1.44s · score 0.91', r:'paged 00:14'},
 {sev:'ok',   t:'Recovered inside grace window',          m:'media-encoder · memory back to baseline',     r:'no page'},
